@@ -31,6 +31,35 @@ There are two types:
     Fixed Size: The window is always K elements wide (e.g., "Find the max sum of any 3 consecutive elements").
 
     Variable Size: The window expands until a condition is met, then shrinks to find the smallest valid range (e.g., "Find the shortest subarray with a sum ≥X").
+```
+#include <bits/stdc++.h>
+#include "template.cpp"
+
+using namespace std;
+
+int main()
+{
+
+    vector<int> vec = {2, 5, 1, 7, 10};
+    int k = 14;
+    int n = vec.size();
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << "[ ";
+        for (int j = i; j < n; j++)
+        {
+            cout << vec[j] << " ";
+        }
+        cout << "]" << endl;
+    }
+    
+
+    cout << "end" << endl;
+
+    return EXIT_SUCCESS;
+}
+```
 
 ## Binary search
 Binary search is the gold standard for searching in sorted data. While a linear search checks every element (O(n)), binary search uses a "divide and conquer" strategy to find the target in logarithmic time (O(logn)).
@@ -48,3 +77,4 @@ Think of it like a line of people of different heights. If a new, taller person 
     Monotonic Increasing: 1,3,6,10 (New elements must be greater than the top).
 
     Monotonic Decreasing: 10,6,3,1 (New elements must be smaller than the top).
+
